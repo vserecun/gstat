@@ -1,3 +1,4 @@
+#!/usr/bin/env python3.7
 import argparse
 import csv
 import uuid
@@ -18,7 +19,7 @@ def to_csv(filepath, data):
 def main():
     command_line = argparse.ArgumentParser(
         prog='gstat',
-        description='The gstat script analyzes packets of goose protocol. '
+        description='The goose_stat script analyzes packets of goose protocol. '
                     'It writes results into csv files of specified directory.')
 
     command_line.add_argument(
