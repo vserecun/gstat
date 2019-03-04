@@ -7,7 +7,7 @@ def readme():
 
 
 setup(name='gstat',
-      vesrion='0.0.1',
+      version='0.0.1',
       description='Goose protocol script extractor',
       long_description=readme(),
       classifiers=[
@@ -25,7 +25,7 @@ setup(name='gstat',
       licence="MIT",
       packages=find_packages(),
       install_requires=[
-          'pyshark',
+          'pyshark==0.4.2.2'
       ],
       scripts=['bin/goose_stat.py'],
       include_package_data=True,

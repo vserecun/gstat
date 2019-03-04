@@ -1,1 +1,1 @@
-pyshark
+pyshark==0.4.2.2

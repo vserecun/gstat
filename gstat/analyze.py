@@ -6,6 +6,8 @@ def to_csv(filepath, data):
     with open(filepath, 'w') as csvfile:
         stat = csv.DictWriter(csvfile, fieldnames=data[0].keys())
 
+        stat.writeheader()
+
         for row in data:
             stat.writerow(row)
 

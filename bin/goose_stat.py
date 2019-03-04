@@ -1,19 +1,10 @@
 #!/usr/bin/env python3.7
 import argparse
-import csv
 import uuid
 
 import pyshark
 
 from gstat import analyze
-
-
-def to_csv(filepath, data):
-    with open(filepath, 'w') as csvfile:
-        stat = csv.DictWriter(csvfile, fieldnames=data[0].keys())
-
-        for row in data:
-            stat.writerow(row)
 
 
 def main():
@@ -35,7 +26,7 @@ def main():
     flow_loader.analize()
 
     for data in flow_loader.data.values():
-        to_csv(f"{uuid.uuid4()}.csv", data)
+        analyze.to_csv(f"{uuid.uuid4()}.csv", data)
 
 
 if __name__ == '__main__':
